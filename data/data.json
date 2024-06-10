@@ -1,0 +1,41 @@
+{
+    "carreras": [
+      {
+        "id": 1,
+        "nombre": "Ingeniería en Informática",
+        "materias": [
+          {
+            "id": 101,
+            "nombre": "Algoritmos y Estructuras de Datos"
+          },
+          {
+            "id": 102,
+            "nombre": "Programación Orientada a Objetos"
+          },
+          {
+            "id": 103,
+            "nombre": "Bases de Datos"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nombre": "Licenciatura en Administración de Empresas",
+        "materias": [
+          {
+            "id": 201,
+            "nombre": "Contabilidad"
+          },
+          {
+            "id": 202,
+            "nombre": "Marketing"
+          },
+          {
+            "id": 203,
+            "nombre": "Gestión de Recursos Humanos"
+          }
+        ]
+      }
+    ]
+  }
+  
