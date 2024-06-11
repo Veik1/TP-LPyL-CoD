@@ -26,7 +26,7 @@ module.exports = {
       const listaId = carreras.map(carrera=>carrera.id)
       id = Math.max(...listaId)+1
     }
-    carreras.push({id,...data,materias:[]})
+    carreras.push({id,...nuevaCarrera,materias:[]})
     res.status(201).json({ message: 'Carrera creada correctamente.', carrera: nuevaCarrera });
     
   },
