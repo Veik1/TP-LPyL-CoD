@@ -6,6 +6,12 @@ const carreraController = require('../controllers/carreraController');
 const app = express();
 app.use(bodyParser.json());
 
+// Ruta para obtener todas las carreras
+app.get('/api/carreras', carreraController.getAllCarreras);
+
+// Ruta para obtener una carrera por su ID
+app.get('/api/carreras/:id', carreraController.getCarreraById);
+
 const router = express.Router();
 
 router.get('/:carreraId/materias', materiaController.getAllMaterias);

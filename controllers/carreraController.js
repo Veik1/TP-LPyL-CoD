@@ -2,20 +2,25 @@ const data = require('../data/data.json');
 
 module.exports = {
   
+  getAllCarreras: (req, res) => {
+    try {
+      res.status(200).json(data.carreras);
+    } catch (error) {
+      res.status(500).json({ message: 'Error al obtener las carreras.' });
+    }
+  },
   
-    getAllCarreras: (req, res) => {
-      res.json(data.carreras);
-    }    
-  ,
   getCarreraById: (req, res) => {
-    // Lógica para obtener una carrera por su ID
-    const id = req.params.id
-    const carrera = carreras.find(carrera => carrera.id == id)
+    const id = req.params.id;
+    const carrera = data.carreras.find(carrera => carrera.id == id); // Utiliza los datos de las carreras
+    if (!carrera) {
+      return res.status(404).json({ message: 'Carrera no encontrada.' });
+    }
     const carreraSinMaterias = {
       id: carrera.id,
       nombre: carrera.nombre
-    }
-    res.status(200).json(carreraSinMaterias)
+    };
+    res.status(200).json(carreraSinMaterias);
   },
 
   createCarrera: (req, res) => {

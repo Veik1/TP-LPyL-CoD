@@ -1,4 +1,5 @@
-const data = require('../data/data.json');
+const data = require('../data/data.json')
+const {carreras} = require('./carreraController')
 
 module.exports = {
   getAllMaterias: (req, res) => {
@@ -16,6 +17,9 @@ module.exports = {
 
   createMateria: (req, res) => {
     // Lógica para crear una nueva materia para una carrera
+    const dataMateria = req.body
+    let id = 1
+    const carrera = carreras.find(carrera=>carrera.id==idCarrera)
   },
 
   updateMateria: (req, res) => {
