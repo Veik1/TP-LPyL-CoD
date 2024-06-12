@@ -3,7 +3,7 @@
 ## Integrantes: 
 
 Alvez, Sofía.  
-Maldonado, Ignacio. 
+Maldonado, Ignacio.  
 Mentoro, Facundo.  
 Romero, Sergio.  
 
