@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { sequelize } = require('../models');
+const { sequelize } = require('../models'); 
 const materiaRoutes = require('./routes/materia.routes');
 const carreraRoutes = require('./routes/carrera.routes');
 
@@ -14,9 +14,8 @@ sequelize.sync({ force: true }).then(() => {
   console.error('Error al sincronizar la base de datos:', error);
 });
 
-
-app.use(carreraRoutes);
-app.use(materiaRoutes);
+app.use('/api', carreraRoutes); 
+app.use('/api', materiaRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

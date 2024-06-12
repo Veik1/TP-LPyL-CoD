@@ -1,9 +1,7 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class materia extends Model {
+  class Materia extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  materia.init({
+  Materia.init({
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -34,8 +32,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Materia',
+    tableName: 'materia',
     timestamps: false // Esto evita que Sequelize agregue automáticamente los campos createdAt y updatedAt a la tabla
   });
 
-  return materia;
+  return Materia;
 };

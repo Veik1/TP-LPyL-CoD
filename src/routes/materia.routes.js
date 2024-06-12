@@ -1,37 +1,44 @@
+const { Router } = require('express');
+const materiaController = require('../controllers/materia.controller');
+const carreraMiddleware = require('../middlewares/carrera.middleware');
+const materiaMiddleware = require('../middlewares/materia.middleware');
+const { schemaValidator } = require('../middlewares/schemaValidator');
+const materiaSchema = require('../schemas/materia.schema');
 
-const { Router } = require('express')
+const route = Router();
 
-//Controladores
-const materiaController = require('../controllers/materia.controller')
-
-const carreraMiddleware = require('../middlewares/carrera.middleware')
-const materiaMiddleware = require('../middlewares/materia.middleware')
-
-//Validador de Schemas
-const { schemaValidator } = require('../middlewares/schemaValidator')
-
-//Schemas
-const materiaSchema = require('../schemas/materia.schema')
-
-
-const route = Router()
-
+// Crear una materia para una carrera específica
 route.post('/carreras/:id/materia',
-    schemaValidator(materiaSchema),
-    carreraMiddleware.verificarIdCarrera,
-    materiaController.createMateria) // Crear una materia dentro de una carrera
-route.get('/carreras/:id/materias',
-    carreraMiddleware.existenCarreras,
-    carreraMiddleware.verificarIdCarrera,
-    materiaMiddleware.verificarMateriaPorIdCarrera,
-    materiaController.getMateriasByCarrera) // Ver todas las materias de una carrera
-route.get('/materias',
-    materiaMiddleware.hayMaterias,
-    materiaController.getAllMaterias) // Ver todas las materias
-route.get('/materias/:id',
-    materiaMiddleware.verificarIdMateria,
-    materiaController.getMateriaById) // Buscar una materia
-route.delete('/materias/:id', materiaMiddleware.verificarIdMateria, materiaController.deleteMateriaById) // Borrar una materia
+    schemaValidator(materiaSchema), // Validar el esquema antes de crear una materia
+    carreraMiddleware.verificarIdCarrera, // Verificar si la carrera existe
+    materiaController.createMateria);
 
+// Obtener todas las materias de una carrera específica
+route.get('/carreras/:id/materias',
+    carreraMiddleware.existenCarreras, // Verificar si existen carreras
+    carreraMiddleware.verificarIdCarrera, // Verificar si la carrera existe
+    materiaMiddleware.verificarMateriaPorIdCarrera, // Verificar si hay materias para la carrera
+    materiaController.getMateriasByCarrera);
+
+// Obtener todas las materias
+route.get('/materias',
+    materiaMiddleware.hayMaterias, // Verificar si hay materias disponibles
+    materiaController.getAllMaterias);
+
+// Obtener una materia por su ID
+route.get('/materias/:id',
+    materiaMiddleware.verificarIdMateria, // Verificar si la materia existe
+    materiaController.getMateriaById);
+
+// Borrar una materia por su ID
+route.delete('/materias/:id',
+    materiaMiddleware.verificarIdMateria, // Verificar si la materia existe
+    materiaController.deleteMateriaById);
+
+// Manejo de errores centralizado
+route.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Error interno del servidor");
+});
 
 module.exports = route;

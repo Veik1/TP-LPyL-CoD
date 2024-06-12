@@ -1,64 +1,73 @@
-const data = require("../../data/data.json");
-const { carreras } = require("./carrera.controller");
-const materias = data.carreras.materias;
+const db = require('../../models');
+const Materia = db.Materia;
 
-const createMateria = (req, res) => {
+const createMateria = async (req, res) => {
   const dataMateria = req.body;
   const idCarrera = req.params.id;
-  let id = 1;
-  const carrera = carreras.find((carrera) => carrera.id == idCarrera);
-  if (carrera.materias.length > 0) {
-    const ids = carrera.materias.map((materia) => materia.id);
-    id = Math.max(...ids) + 1;
+  try {
+    const carreraExistente = await carrera.findByPk(idCarrera);
+    if (!carreraExistente) {
+      return res.status(404).json({ error: "Carrera no encontrada" });
+    }
+    const nuevaMateria = await materia.create({ ...dataMateria, carreraId: idCarrera });
+    res.status(201).json({ mensaje: "La materia ha sido creada", materia: nuevaMateria });
+  } catch (error) {
+    console.error("Error al crear la materia:", error);
+    res.status(500).json({ error: "Hubo un error al crear la materia" });
   }
-  carrera.materias.push({ id, ...dataMateria, idCarrera });
-  return res
-    .status(201).json({
-      mensaje: "La materia ha sido creada",
-      materia: carrera.materias[carrera.materias.length - 1],
-    });
 };
 
-const getMateriasByCarrera = (req, res) => {
+const getMateriasByCarrera = async (req, res) => {
   const idCarrera = req.params.id;
-  const carrera = carreras.find((carrera) => carrera.id == idCarrera);
-  const materiasById = carrera.materias;
-  return res
-    .status(200)
-    .json({ carrera: carrera.nombre, materias: materiasById });
+  try {
+    const carreraConMaterias = await carrera.findByPk(idCarrera, {
+      include: 'materias'
+    });
+    if (!carreraConMaterias) {
+      return res.status(404).json({ error: "Carrera no encontrada" });
+    }
+    res.status(200).json(carreraConMaterias.materias);
+  } catch (error) {
+    console.error("Error al obtener las materias de la carrera:", error);
+    res.status(500).json({ error: "Hubo un error al obtener las materias de la carrera" });
+  }
 };
 
-const getAllMaterias = (req, res) => {
-  const materiasRecorriendoCarreras = carreras.map(
-    (carrera) => carrera.materias
-  );
-  return res.status(200).json(materiasRecorriendoCarreras);
+const getAllMaterias = async (req, res) => {
+  try {
+    const materias = await materia.findAll();
+    res.status(200).json(materias);
+  } catch (error) {
+    console.error("Error al obtener las materias:", error);
+    res.status(500).json({ error: "Hubo un error al obtener las materias" });
+  }
 };
 
-const getMateriaById = (req, res) => {
+const getMateriaById = async (req, res) => {
   const id = req.params.id;
-  const materiasExtraidas = carreras.flatMap((carrera) => carrera.materias);
-  const materia = materiasExtraidas.find((materia) => materia.id == id);
-  res.status(200).json(materia);
+  try {
+    const materiaEncontrada = await materia.findByPk(id);
+    if (!materiaEncontrada) {
+      return res.status(404).json({ error: "Materia no encontrada" });
+    }
+    res.status(200).json(materiaEncontrada);
+  } catch (error) {
+    console.error("Error al obtener la materia:", error);
+    res.status(500).json({ error: "Hubo un error al obtener la materia" });
+  }
 };
 
-const deleteMateriaById = (req, res) => {
+const deleteMateriaById = async (req, res) => {
   const id = req.params.id;
-  const materiasExtraidas = carreras.flatMap((carrera) => carrera.materias);
-  const idx = materiasExtraidas.findIndex((materia) => materia.id == id);
-  if (idx >= 0) {
-    const carrera = carreras.find((carrera) =>
-      carrera.materias.some((materia) => materia.id == id)
-    );
-    const idxMateriaDentroDeCarrera = carrera.materias.findIndex(
-      (materia) => materia.id == id
-    );
-    const borrada = carrera.materias.splice(idxMateriaDentroDeCarrera, 1);
-    res
-      .status(200)
-      .json({
-        mensaje: `La materia ${borrada[0].nombre} fue borrada con exito`,
-      });
+  try {
+    const materiaEliminada = await materia.destroy({ where: { id } });
+    if (!materiaEliminada) {
+      return res.status(404).json({ error: "Materia no encontrada" });
+    }
+    res.status(200).json({ mensaje: "Materia eliminada con éxito" });
+  } catch (error) {
+    console.error("Error al eliminar la materia:", error);
+    res.status(500).json({ error: "Hubo un error al eliminar la materia" });
   }
 };
 
@@ -68,5 +77,4 @@ module.exports = {
   getAllMaterias,
   getMateriaById,
   deleteMateriaById,
-  materias,
 };

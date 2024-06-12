@@ -1,19 +1,14 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
-  class carrera extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+  class Carrera extends Model {
     static associate(models) {
-      // define association here
+      // Aquí podrías definir asociaciones si tienes otras tablas relacionadas
     }
   }
-  carrera.init({
+
+  Carrera.init({
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -34,8 +29,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Carrera',
-    timestamps: false // Esto evita que Sequelize agregue automáticamente los campos createdAt y updatedAt a la tabla
+    timestamps: false, // Evita que Sequelize agregue createdAt y updatedAt
+    tableName: 'carreras' // Nombre específico de la tabla en la base de datos
   });
 
-  return carrera;
+  return Carrera;
 };

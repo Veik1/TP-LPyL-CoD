@@ -1,48 +1,53 @@
-const data = require("../../data/data.json");
+const db = require('../../models');
+const Carrera = db.Carrera;
+const Materia = db.Materia;
 
-const carreras = data.carreras; //Extraigo del JSON las carreras
-
-const getAllCarreras = (req, res) => {
-  res.status(200).json(carreras);
-};
-
-const getCarreraById = (req, res) => {
-  const id = req.params.id;
-  const carrera = carreras.find((carrera) => carrera.id == id);
-  if (!carrera) {
-    return res.status(404).json({ error: "Mal ahí, no se pudo encontrar la carrera" });
+const getAllCarreras = async (req, res) => {
+  try {
+    const carreras = await Carrera.findAll();
+    res.status(200).json(carreras);
+  } catch (error) {
+    console.error('Error al obtener las carreras:', error);
+    res.status(500).json({ error: 'Hubo un error al obtener las carreras' });
   }
-  res.status(200).json(carrera);
 };
 
+const getCarreraById = async (req, res) => {
+  const id = req.params.id;
+  try {
+      const Carrera = await Carrera.findOne({ where: { id: id } });
+      if (!Carrera) {
+          res.status(404).json({ error: 'Carrera no encontrada' });
+      } else {
+          res.status(200).json(Carrera);
+      }
+  } catch (error) {
+      res.status(500).json({ error: error.message });
+  }
+}
 
-const createCarrera = (req, res) => {
+const createCarrera = async (req, res) => {
   const datos = req.body;
-  let indexCarrera = 1;
-  if (carreras.length) {
-    const listaIndices = carreras.map(carrera => carrera.id);
-    indexCarrera = Math.max(...listaIndices) + 1;
+  try {
+    const nuevaCarrera = await Carrera.create(datos);
+    res.status(201).json({ mensaje: 'Carrera creada con éxito', carrera: nuevaCarrera });
+  } catch (error) {
+    console.error('Error al crear la carrera:', error);
+    res.status(500).json({ error: 'Hubo un error al crear la carrera' });
   }
-  carreras.push({ ID: indexCarrera, ...datos, materias: [] });
-  return res.status(201).json({ mensaje: 'Bien ahí, la carrera fue creada con éxito:', carrera: carreras[carreras.length - 1] });
 };
 
-
-
-const deleteCarreraById = (req, res) => {
+const deleteCarreraById = async (req, res) => {
   const id = req.params.id;
-  const idBorrar = carreras.findIndex((carrera) => carrera.id == id);
-  if (idBorrar >= 0) {
-    const eliminado = carreras.splice(idBorrar, 1);
-    return res
-      .status(200)
-      .json({
-        mensaje: `La carrera ${eliminado[0].nombre} fue eliminada con éxito`,
-      });
-  } else {
-    return res
-      .status(404)
-      .json({ mensaje: `No hay ninguna carrera con el ID ${id}` });
+  try {
+    const carreraEliminada = await Carrera.destroy({ where: { id } });
+    if (!carreraEliminada) {
+      return res.status(404).json({ error: 'Carrera no encontrada' });
+    }
+    res.status(200).json({ mensaje: 'Carrera eliminada con éxito' });
+  } catch (error) {
+    console.error('Error al eliminar la carrera:', error);
+    res.status(500).json({ error: 'Hubo un error al eliminar la carrera' });
   }
 };
 
@@ -51,5 +56,4 @@ module.exports = {
   getCarreraById,
   createCarrera,
   deleteCarreraById,
-  carreras,
 };
