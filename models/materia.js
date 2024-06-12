@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: false
     },
     nombre: {
       type: DataTypes.STRING,
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Materia',
     tableName: 'materia',
-    timestamps: false // Esto evita que Sequelize agregue automáticamente los campos createdAt y updatedAt a la tabla
+    timestamps: false
   });
 
   return Materia;
