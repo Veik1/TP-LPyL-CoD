@@ -14,8 +14,25 @@ El funcionamiento de la misma es controlar una base de datos, haciendo Get, Post
 Tiene una base de carreras, donde cada carrera tiene sus materias.   
 Una carrera tiene muchas materias, y cada materia solo se encuentra en una carrera.  
 
-***Instalación:***
-Copia el repositorio a tu carpeta local.  
+***Instalación:***  
+
+1 Copia el repositorio a tu carpeta local.  
+ 
+ bash
+   git clone https://github.com/Veik1/TP-LPyL-CoD.git
+
+2 Abre la consola y navega al directorio   
+
+3 Instala las dependencias necesarias para el funcionamiento  
+  
+  npm install 
+
+
+***Configuración:***   
+
+
+***Uso:***
+
 
 
 
