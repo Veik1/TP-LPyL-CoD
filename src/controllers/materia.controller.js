@@ -15,7 +15,7 @@ const createMateria = (req, res) => {
   return res
     .status(201)
     .json({
-      mensaje: "Materia creada con exito",
+      mensaje: "La materia ha sido creada",
       materia: carrera.materias[carrera.materias.length - 1],
     });
 };

@@ -1,13 +1,13 @@
 const Joi = require('joi');
 
-const carreraSchema = Joi.object({
+const carreraSchema = Joi.object().keys({
     nombre: Joi.string()
         .min(10)
         .max(60)
         .required()
         .messages({
-            'string.min': 'La carrera debe tener al menos 10 caracteres',
-            'string.max': 'La carrera no puede tener más de 60 caracteres',
+            'string.min': 'La carrera debe tener al menos {#limit} caracteres',
+            'string.max': 'La carrera no puede tener más de {#limit} caracteres',
             'string.empty': 'Por favor, ingrese el nombre de la carrera',
             'any.required': 'El nombre de la carrera es obligatorio'
         }),

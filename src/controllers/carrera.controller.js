@@ -15,15 +15,18 @@ const getCarreraById = (req, res) => {
   res.status(200).json(carrera);
 };
 
+
 const createCarrera = (req, res) => {
   const nuevaCarrera = req.body;
   const id = obtenerNuevoId();
   const carreraConId = { id, ...nuevaCarrera, materias: [] };
   carreras.push(carreraConId);
-  return res
-    .status(201)
-    .json({ mensaje: "Bien ahí! La carrera fue creada con éxito: ", carrera: carreraConId });
+  return res.status(201).json({
+    mensaje: "¡Bien ahí! La carrera fue creada con éxito.",
+    carrera: carreraConId // Aquí debería devolver toda la información de la carrera, incluido el ID
+  });
 };
+
 
 const obtenerNuevoId = () => {
   if (carreras.length === 0) {
