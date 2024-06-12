@@ -13,8 +13,7 @@ const createMateria = (req, res) => {
   }
   carrera.materias.push({ id, ...dataMateria, idCarrera });
   return res
-    .status(201)
-    .json({
+    .status(201).json({
       mensaje: "La materia ha sido creada",
       materia: carrera.materias[carrera.materias.length - 1],
     });

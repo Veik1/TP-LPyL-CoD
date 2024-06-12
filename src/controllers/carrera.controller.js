@@ -17,25 +17,17 @@ const getCarreraById = (req, res) => {
 
 
 const createCarrera = (req, res) => {
-  const nuevaCarrera = req.body;
-  const id = obtenerNuevoId();
-  const carreraConId = { id, ...nuevaCarrera, materias: [] };
-  carreras.push(carreraConId);
-  return res.status(201).json({
-    mensaje: "¡Bien ahí! La carrera fue creada con éxito.",
-    carrera: carreraConId // Aquí debería devolver toda la información de la carrera, incluido el ID
-  });
-};
-
-
-const obtenerNuevoId = () => {
-  if (carreras.length === 0) {
-    return 1;
-  } else {
-    const listaIds = carreras.map((carrera) => carrera.id);
-    return Math.max(...listaIds) + 1;
+  const datos = req.body;
+  let indexCarrera = 1;
+  if (carreras.length) {
+    const listaIndices = carreras.map(carrera => carrera.id);
+    indexCarrera = Math.max(...listaIndices) + 1;
   }
+  carreras.push({ ID: indexCarrera, ...datos, materias: [] });
+  return res.status(201).json({ mensaje: 'Bien ahí, la carrera fue creada con éxito:', carrera: carreras[carreras.length - 1] });
 };
+
+
 
 const deleteCarreraById = (req, res) => {
   const id = req.params.id;

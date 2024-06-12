@@ -14,9 +14,7 @@ const verificarIdCarrera = (req, res, next) => {
     (carrera) => carrera.id === parseInt(id)
   );
   if (!carreraExistente) {
-    return res
-      .status(404)
-      .json({ error: `La carrera con el ID ${id} no se encuentra registrada` });
+    return res.status(404).json({ mensaje: `La carrera con el ID ${id} no se encuentra registrada` });
   }
   next();
 };
