@@ -3,36 +3,56 @@
       {
         "id": 1,
         "nombre": "Ingeniería en Informática",
+        "universidad": "UNPAZ",
         "materias": [
           {
             "id": 101,
-            "nombre": "Algoritmos y Estructuras de Datos"
+            "nombre": "Algoritmos y Estructuras de Datos",
+            "cuatrimestral": 1,
+            "anio": 1,
+            "carreraId": 1
           },
           {
             "id": 102,
-            "nombre": "Programación Orientada a Objetos"
+            "nombre": "Programación Orientada a Objetos",
+            "cuatrimestral": 1,
+            "anio": 2,
+            "carreraId": 1
           },
           {
             "id": 103,
-            "nombre": "Bases de Datos"
+            "nombre": "Bases de Datos",
+            "cuatrimestral": 1,
+            "anio": 2,
+            "carreraId": 1
           }
         ]
       },
       {
         "id": 2,
         "nombre": "Licenciatura en Administración de Empresas",
+        "universidad": "UNPAZ",
         "materias": [
           {
             "id": 201,
-            "nombre": "Contabilidad"
+            "nombre": "Contabilidad",
+            "cuatrimestral": 1,
+            "anio": 1,
+            "carreraId": 2
           },
           {
             "id": 202,
-            "nombre": "Marketing"
+            "nombre": "Marketing",
+            "cuatrimestral": 1,
+            "anio": 1,
+            "carreraId": 2
           },
           {
             "id": 203,
-            "nombre": "Gestión de Recursos Humanos"
+            "nombre": "Gestión de Recursos Humanos",
+            "cuatrimestral": 1,
+            "anio": 2,
+            "carreraId": 2
           }
         ]
       }
