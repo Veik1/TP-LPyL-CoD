@@ -7,6 +7,7 @@ Maldonado, Ignacio.
 Mentoro, Facundo.  
 Romero, Sergio.  
 
+***Descripción:***  
 Api desarrollada en Node.js, Express.js utilizando Middlewares, Controladores y Routes.  
 El funcionamiento de la misma es controlar una base de datos, haciendo Get, Post, y Delete.
 Tiene una base de carreras, donde cada carrera tiene sus materias.   
