@@ -1,60 +1,166 @@
 {
     "carreras": [
       {
-        "id": 1,
-        "nombre": "Ingeniería en Informática",
-        "universidad": "UNPAZ",
-        "materias": [
-          {
-            "id": 101,
-            "nombre": "Algoritmos y Estructuras de Datos",
-            "cuatrimestral": 1,
-            "anio": 1,
-            "carreraId": 1
-          },
-          {
-            "id": 102,
-            "nombre": "Programación Orientada a Objetos",
-            "cuatrimestral": 1,
-            "anio": 2,
-            "carreraId": 1
-          },
-          {
-            "id": 103,
-            "nombre": "Bases de Datos",
-            "cuatrimestral": 1,
-            "anio": 2,
-            "carreraId": 1
-          }
-        ]
+        "nombre": "Licenciatura en Gestión de las Tecnologías de Información",
+        "grado": "Licenciatura",
+        "universidad": "UNPAZ"
       },
       {
-        "id": 2,
-        "nombre": "Licenciatura en Administración de Empresas",
-        "universidad": "UNPAZ",
-        "materias": [
-          {
-            "id": 201,
-            "nombre": "Contabilidad",
-            "cuatrimestral": 1,
-            "anio": 1,
-            "carreraId": 2
-          },
-          {
-            "id": 202,
-            "nombre": "Marketing",
-            "cuatrimestral": 1,
-            "anio": 1,
-            "carreraId": 2
-          },
-          {
-            "id": 203,
-            "nombre": "Gestión de Recursos Humanos",
-            "cuatrimestral": 1,
-            "anio": 2,
-            "carreraId": 2
-          }
-        ]
+        "nombre": "Tecnicatura en Redes",
+        "grado": "Tecnicatura",
+        "universidad": "UNPAZ"
+      }
+    ],
+    "materias": [
+      {
+        "nombre": "Análisis Matemático I",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Arquitectura de Computadoras I",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Introducción a la Programación",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Estructuras Discretas",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Ciencia, Tecnología y Sociedad",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Análisis Matemático II",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Álgebra y Geometría Analítica",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Algoritmos y Programación",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Arquitectura de Computadoras II",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Inglés I",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Sistemas Operativos I",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Economía General",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Inglés II",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Ingeniería de Software I",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Paradigmas de Programación",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 1
+      },
+      {
+        "nombre": "Introducción a las Redes",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 2
+      },
+      {
+        "nombre": "Fundamentos de Networking",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 2
+      },
+      {
+        "nombre": "Protocolos de Internet",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 2
+      },
+      {
+        "nombre": "Seguridad en Redes",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 2
+      },
+      {
+        "nombre": "Administración de Sistemas",
+        "cuatrimestral": 1,
+        "anio": 1,
+        "carreraId": 2
+      },
+      {
+        "nombre": "Routing y Switching",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 2
+      },
+      {
+        "nombre": "Servicios de Red",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 2
+      },
+      {
+        "nombre": "Redes Inalámbricas",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 2
+      },
+      {
+        "nombre": "Virtualización de Redes",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 2
+      },
+      {
+        "nombre": "Gestión de Redes",
+        "cuatrimestral": 1,
+        "anio": 2,
+        "carreraId": 2
       }
     ]
   }
