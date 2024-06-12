@@ -32,16 +32,22 @@ Una carrera tiene muchas materias, y cada materia solo se encuentra en una carre
 
 
 ***Uso y prueba:***  
-Verbo	Recurso	Status code	Descripción
-Get	/carreras	200	Obtener todas la carreras   
-Get	/carreras/:id	200, 404	Obtener una carrera en particular   
-Post	/carreras	201 , 400	Crear una Carrera   
-Delete	/carreras/:id	200, 404	Borra una carrera en particular   
-Post	/carreras/:id/materia	201, 404, 400	Crea un materia dentro de una carrera    
-Get	/carreras/:id/materias	200, 404	Obtener todas la materias de una Carrera    
-Get	/materias	200	Obtener todas las materias     
-Get	/materias/:id	200, 404	Obtener una materia en particular     
-Delete	/materias/:id	200, 404	Borra una materia en particular      
+
+**Get**	/carreras	              Resultado: 200	Obtener todas la carreras   
+**Get**	/carreras/:id	          Resultado: 200, 404	Obtener una carrera en particular   
+
+**Post**	/carreras	             Resultado:201 , 400	Crear una Carrera   
+
+**Delete**	/carreras/:id	       Resultado:200, 404	Borra una carrera en particular   
+
+**Post**	/carreras/:id/materia	 Resultado:201, 404, 400	Crea un materia dentro de una carrera    
+
+
+**Get**	/carreras/:id/materias 	Resultado:200, 404	Obtener todas la materias de una Carrera    
+
+**Get**	/materias	              Resultado:200	Obtener todas las materias     
+**Get**	/materias/:id	          Resultado:200, 404	Obtener una materia en particular     
+**Delete**	/materias/:id       	Resultado:200, 404	Borra una materia en particular      
 
 
 
