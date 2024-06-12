@@ -23,7 +23,7 @@ Una carrera tiene muchas materias, y cada materia solo se encuentra en una carre
 
 2 Abre la consola y navega al directorio   
 
-3 Instala las dependencias necesarias para el funcionamiento  
+3 Instala las dependencias necesarias para el funcionamiento corriendo el siguiente codigo: 
   
   npm install 
 
