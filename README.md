@@ -2,10 +2,10 @@
 
 ## Integrantes: 
 
-Alvez, Sofía.
+Alvez, Sofía.  
 Maldonado, Ignacio. 
-Mentoro, Facundo.
-Romero, Sergio.
+Mentoro, Facundo.  
+Romero, Sergio.  
 
 
 
