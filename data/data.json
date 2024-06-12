@@ -169,104 +169,104 @@
     {
       "id": 101,
       "nombre": "Licenciatura en Comunicacion",
-      "grado": "icenciatura",
+      "grado": "Licenciatura",
       "universidad": "UNGS",
       "materias": [
         {
           "id": 1,
           "nombre": "Taller Inicial Común: Taller de Lectura y Escritura",
           "anio": 1,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 2,
           "nombre": "Taller Inicial Orientado: Ciencias Sociales o Taller Inicial Orientado: Ciencias Humanas",
           "anio": 1,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 3,
           "nombre": "Taller de Lectura y Escritura en las Disciplinas",
           "anio": 1,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 4,
           "nombre": "Problemas Socioeconómicos Contemporáneos",
           "anio": 1,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 5,
           "nombre": "Lenguaje, Comunicación y Cultura",
           "anio": 1,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 6,
           "nombre": "Historia Moderna y Contemporánea",
           "anio": 1,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 7,
           "nombre": "Sociología Clásica",
           "anio": 1,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 8,
           "nombre": "Introducción a la Comunicación",
           "anio": 1,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 9,
           "nombre": "Optativa I",
           "anio": 1,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 10,
           "nombre": "Sociología Contemporánea",
           "anio": 2,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 11,
           "nombre": "Lenguaje, Cultura y Comunicación de la Imagen",
           "anio": 2,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 12,
           "nombre": "Sociología de la Cultura",
           "anio": 2,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 13,
           "nombre": "Organizaciones y Comunicación",
           "anio": 2,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 14,
           "nombre": "Lenguaje, Comunicación y Cultura Escrita",
           "anio": 2,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 15,
           "nombre": "Taller de Escritura Periodística I",
           "anio": 2,
-          "carreraId": null
+          "carreraId": 101
         },
         {
           "id": 16,
           "nombre": "Concepciones de la Comunicación",
           "anio": 2,
-          "carreraId": null
+          "carreraId": 101
         }
       ]
     }
