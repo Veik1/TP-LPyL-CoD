@@ -1,6 +1,14 @@
 const Joi = require('joi');
 
 const materiaSchema = Joi.object({
+    id: Joi.number()
+        .integer()
+        .required()
+        .messages({
+            'number.base': 'El ID debe ser un número',
+            'number.integer': 'El ID debe ser un número entero',
+            'any.required': 'El ID es obligatorio'
+        }),
     nombre: Joi.string()
         .min(10)
         .max(50)
