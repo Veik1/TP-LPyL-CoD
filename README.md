@@ -1,4 +1,4 @@
-# TP-Laboratorio de Programación y Lenguajes del grupo "Code of Duty"
+# TP - Laboratorio de Programación y Lenguajes del grupo "Code of Duty"
 
 ## Integrantes: 
 Alvez, Sofía.  
