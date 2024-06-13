@@ -35,7 +35,7 @@ Una carrera tiene muchas materias, y cada materia solo se encuentra en una carre
 
  
  
-# Uso y prueba.  
+## Uso y prueba.  
 
 Una vez instalado en tu entorno local: abrir POSTMAN, y hacer las siguientes pruebas  
 
