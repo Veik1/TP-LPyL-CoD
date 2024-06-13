@@ -1,14 +1,17 @@
-# TP-Laboratorio de Programación y Lenguajes del grupo "Code Of Duty"
+# TP-Laboratorio de Programación y Lenguajes del grupo "Code of Duty"
+
 ## Integrantes: 
 Alvez, Sofía.  
 Maldonado, Ignacio.  
 Mentoro, Facundo.  
 Romero, Sergio.  
+
 ***Descripción:***  
 Api desarrollada en Node.js, Express.js utilizando Middlewares, Controladores y Routes.  
 El funcionamiento de la misma es controlar una base de datos, haciendo Get, Post, y Delete.
 Tiene una base de carreras, donde cada carrera tiene sus materias.   
 Una carrera tiene muchas materias, y cada materia solo se encuentra en una carrera.  
+
 ***Instalación:***  
 1 Copia el repositorio a tu carpeta local.  
  
@@ -23,6 +26,7 @@ Una carrera tiene muchas materias, y cada materia solo se encuentra en una carre
   npm install 
 
 ***Configuración:***   
+
 ***Uso y prueba:***  
 **Get**	/carreras	              Resultado: 200	Obtener todas la carreras   
 **Get**	/carreras/:id	          Resultado: 200, 404	Obtener una carrera en particular   
