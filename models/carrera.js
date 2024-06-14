@@ -4,7 +4,7 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Carrera extends Model {
     static associate(models) {
-      // Aquí podrías definir asociaciones si tienes otras tablas relacionadas
+      Carrera.hasMany(models.Materia, {as: 'Materia'})
     }
   }
 
@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Carrera',
     timestamps: false, // Evita que Sequelize agregue createdAt y updatedAt
-    tableName: 'carreras' // Nombre específico de la tabla en la base de datos
+    tableName: 'carrera' // Nombre específico de la tabla en la base de datos
   });
 
   return Carrera;
