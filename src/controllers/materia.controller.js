@@ -1,16 +1,21 @@
-const db = require('../../models');
+const db = require("../../models");
 const Materia = db.Materia;
 
 const createMateria = async (req, res) => {
-  const dataMateria = req.body;
-  const idCarrera = req.params.id;
+  const { id, nombre, anio, carreraId } = req.body;
+
   try {
-    const carreraExistente = await carrera.findByPk(idCarrera);
-    if (!carreraExistente) {
-      return res.status(404).json({ error: "Carrera no encontrada" });
+    // Verificar si ya existe un registro con el mismo ID
+    const existingMateria = await Materia.findByPk(id);
+    if (existingMateria) {
+      return res.status(400).json({ error: "El ID de materia ya está en uso" });
     }
-    const nuevaMateria = await materia.create({ ...dataMateria, carreraId: idCarrera });
-    res.status(201).json({ mensaje: "La materia ha sido creada", materia: nuevaMateria });
+
+    // Crear el registro
+    const nuevaMateria = await Materia.create({ id, nombre, anio, carreraId });
+    res
+      .status(201)
+      .json({ mensaje: "Materia creada con éxito", materia: nuevaMateria });
   } catch (error) {
     console.error("Error al crear la materia:", error);
     res.status(500).json({ error: "Hubo un error al crear la materia" });
@@ -21,7 +26,7 @@ const getMateriasByCarrera = async (req, res) => {
   const idCarrera = req.params.id;
   try {
     const carreraConMaterias = await carrera.findByPk(idCarrera, {
-      include: 'materias'
+      include: "materias",
     });
     if (!carreraConMaterias) {
       return res.status(404).json({ error: "Carrera no encontrada" });
@@ -29,38 +34,56 @@ const getMateriasByCarrera = async (req, res) => {
     res.status(200).json(carreraConMaterias.materias);
   } catch (error) {
     console.error("Error al obtener las materias de la carrera:", error);
-    res.status(500).json({ error: "Hubo un error al obtener las materias de la carrera" });
+    res
+      .status(500)
+      .json({ error: "Hubo un error al obtener las materias de la carrera" });
   }
 };
 
 const getAllMaterias = async (req, res) => {
   try {
-    const materias = await materia.findAll();
+    const materias = await Materia.findAll();
     res.status(200).json(materias);
   } catch (error) {
-    console.error("Error al obtener las materias:", error);
-    res.status(500).json({ error: "Hubo un error al obtener las materias" });
+    console.error('Error al obtener las materias:', error);
+    res.status(500).json({ error: 'Hubo un error al obtener las materias' });
   }
 };
 
 const getMateriaById = async (req, res) => {
   const id = req.params.id;
   try {
-    const materiaEncontrada = await materia.findByPk(id);
-    if (!materiaEncontrada) {
-      return res.status(404).json({ error: "Materia no encontrada" });
+    const materia = await Materia.findOne({ where: { id: id } });
+    if (!materia) {
+      res.status(404).json({ error: 'Materia no encontrada' });
+    } else {
+      res.status(200).json(materia);
     }
-    res.status(200).json(materiaEncontrada);
   } catch (error) {
-    console.error("Error al obtener la materia:", error);
-    res.status(500).json({ error: "Hubo un error al obtener la materia" });
+    res.status(500).json({ error: error.message });
   }
 };
 
-const deleteMateriaById = async (req, res) => {
+const updateMateria = async (req, res) => {
+  const id = req.params.id;
+  const datos = req.body;
+  try {
+    const materia = await Materia.findOne({ where: { id } });
+    if (!materia) {
+      return res.status(404).json({ error: "Materia no encontrada" });
+    }
+    await Materia.update(datos, { where: { id } });
+    res.status(200).json({ mensaje: "Materia actualizada con éxito" });
+  } catch (error) {
+    console.error("Error al actualizar la materia:", error);
+    res.status(500).json({ error: "Hubo un error al actualizar la materia" });
+  }
+};
+
+const deleteMateria = async (req, res) => {
   const id = req.params.id;
   try {
-    const materiaEliminada = await materia.destroy({ where: { id } });
+    const materiaEliminada = await Materia.destroy({ where: { id } });
     if (!materiaEliminada) {
       return res.status(404).json({ error: "Materia no encontrada" });
     }
@@ -76,5 +99,6 @@ module.exports = {
   getMateriasByCarrera,
   getAllMaterias,
   getMateriaById,
-  deleteMateriaById,
+  updateMateria,
+  deleteMateria,
 };

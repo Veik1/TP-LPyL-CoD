@@ -1,11 +1,13 @@
-const db = require('../../models');
+const db = require("../../models");
 const Carrera = db.Carrera;
 
 const existenCarreras = async (req, res, next) => {
   try {
     const carreras = await Carrera.findAll();
     if (carreras.length === 0) {
-      return res.status(404).json({ mensaje: "No existen carreras disponibles" });
+      return res
+        .status(404)
+        .json({ mensaje: "No existen carreras disponibles" });
     }
     next();
   } catch (error) {
@@ -19,7 +21,11 @@ const verificarIdCarrera = async (req, res, next) => {
   try {
     const carreraExistente = await Carrera.findByPk(id);
     if (!carreraExistente) {
-      return res.status(404).json({ mensaje: `La carrera con el ID ${id} no se encuentra registrada` });
+      return res
+        .status(404)
+        .json({
+          mensaje: `La carrera con el ID ${id} no se encuentra registrada`,
+        });
     }
     next();
   } catch (error) {

@@ -1,0 +1,274 @@
+{
+  "carreras": [
+    {
+      "id": 1,
+      "nombre": "Licenciatura en Gestión de las Tecnologías de Información",
+      "grado": "Licenciatura",
+      "universidad": "UNPAZ",
+      "materias": [
+        {
+          "id": 1,
+          "nombre": "Análisis Matemático I",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 2,
+          "nombre": "Arquitectura de Computadoras I",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 3,
+          "nombre": "Introducción a la Programación",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 4,
+          "nombre": "Estructuras Discretas",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 5,
+          "nombre": "Ciencia, Tecnología y Sociedad",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 6,
+          "nombre": "Análisis Matemático II",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 7,
+          "nombre": "Álgebra y Geometría Analítica",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 8,
+          "nombre": "Algoritmos y Programación",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 9,
+          "nombre": "Arquitectura de Computadoras II",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 10,
+          "nombre": "Inglés I",
+          "anio": 1,
+          "carreraId": 1
+        },
+        {
+          "id": 11,
+          "nombre": "Sistemas Operativos I",
+          "anio": 2,
+          "carreraId": 1
+        },
+        {
+          "id": 12,
+          "nombre": "Economía General",
+          "anio": 2,
+          "carreraId": 1
+        },
+        {
+          "id": 13,
+          "nombre": "Inglés II",
+          "anio": 2,
+          "carreraId": 1
+        },
+        {
+          "id": 14,
+          "nombre": "Ingeniería de Software I",
+          "anio": 2,
+          "carreraId": 1
+        },
+        {
+          "id": 15,
+          "nombre": "Paradigmas de Programación",
+          "anio": 2,
+          "carreraId": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Tecnicatura en Redes",
+      "grado": "Tecnicatura",
+      "universidad": "UNPAZ",
+      "materias": [
+        {
+          "nombre": "Introducción a las Redes",
+          "cuatrimestral": 1,
+          "anio": 1,
+          "carreraId": 2
+        },
+        {
+          "nombre": "Fundamentos de Networking",
+          "cuatrimestral": 1,
+          "anio": 1,
+          "carreraId": 2
+        },
+        {
+          "nombre": "Protocolos de Internet",
+          "cuatrimestral": 1,
+          "anio": 1,
+          "carreraId": 2
+        },
+        {
+          "nombre": "Seguridad en Redes",
+          "cuatrimestral": 1,
+          "anio": 1,
+          "carreraId": 2
+        },
+        {
+          "nombre": "Administración de Sistemas",
+          "cuatrimestral": 1,
+          "anio": 1,
+          "carreraId": 2
+        },
+        {
+          "nombre": "Routing y Switching",
+          "cuatrimestral": 1,
+          "anio": 2,
+          "carreraId": 2
+        },
+        {
+          "nombre": "Servicios de Red",
+          "cuatrimestral": 1,
+          "anio": 2,
+          "carreraId": 2
+        },
+        {
+          "nombre": "Redes Inalámbricas",
+          "cuatrimestral": 1,
+          "anio": 2,
+          "carreraId": 2
+        },
+        {
+          "nombre": "Virtualización de Redes",
+          "cuatrimestral": 1,
+          "anio": 2,
+          "carreraId": 2
+        },
+        {
+          "nombre": "Gestión de Redes",
+          "cuatrimestral": 1,
+          "anio": 2,
+          "carreraId": 2
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "nombre": "Licenciatura en Comunicacion",
+      "grado": "Licenciatura",
+      "universidad": "UNGS",
+      "materias": [
+        {
+          "id": 1,
+          "nombre": "Taller Inicial Común: Taller de Lectura y Escritura",
+          "anio": 1,
+          "carreraId": 101
+        },
+        {
+          "id": 2,
+          "nombre": "Taller Inicial Orientado: Ciencias Sociales o Taller Inicial Orientado: Ciencias Humanas",
+          "anio": 1,
+          "carreraId": 101
+        },
+        {
+          "id": 3,
+          "nombre": "Taller de Lectura y Escritura en las Disciplinas",
+          "anio": 1,
+          "carreraId": 101
+        },
+        {
+          "id": 4,
+          "nombre": "Problemas Socioeconómicos Contemporáneos",
+          "anio": 1,
+          "carreraId": 101
+        },
+        {
+          "id": 5,
+          "nombre": "Lenguaje, Comunicación y Cultura",
+          "anio": 1,
+          "carreraId": 101
+        },
+        {
+          "id": 6,
+          "nombre": "Historia Moderna y Contemporánea",
+          "anio": 1,
+          "carreraId": 101
+        },
+        {
+          "id": 7,
+          "nombre": "Sociología Clásica",
+          "anio": 1,
+          "carreraId": 101
+        },
+        {
+          "id": 8,
+          "nombre": "Introducción a la Comunicación",
+          "anio": 1,
+          "carreraId": 101
+        },
+        {
+          "id": 9,
+          "nombre": "Optativa I",
+          "anio": 1,
+          "carreraId": 101
+        },
+        {
+          "id": 10,
+          "nombre": "Sociología Contemporánea",
+          "anio": 2,
+          "carreraId": 101
+        },
+        {
+          "id": 11,
+          "nombre": "Lenguaje, Cultura y Comunicación de la Imagen",
+          "anio": 2,
+          "carreraId": 101
+        },
+        {
+          "id": 12,
+          "nombre": "Sociología de la Cultura",
+          "anio": 2,
+          "carreraId": 101
+        },
+        {
+          "id": 13,
+          "nombre": "Organizaciones y Comunicación",
+          "anio": 2,
+          "carreraId": 101
+        },
+        {
+          "id": 14,
+          "nombre": "Lenguaje, Comunicación y Cultura Escrita",
+          "anio": 2,
+          "carreraId": 101
+        },
+        {
+          "id": 15,
+          "nombre": "Taller de Escritura Periodística I",
+          "anio": 2,
+          "carreraId": 101
+        },
+        {
+          "id": 16,
+          "nombre": "Concepciones de la Comunicación",
+          "anio": 2,
+          "carreraId": 101
+        }
+      ]
+    }
+  ]
+}
