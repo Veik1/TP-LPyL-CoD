@@ -1,3 +1,12 @@
+# TP - Laboratorio de programación y Lenguaje 2024
+Grupo **Code Of Duty**
+
+### Integrantes:
+	• Alvez Sofia
+ 	• Maldonado Ignacio
+  	• Mentoro Facundo
+   	• Romero Sergio
+
 ## Guia de Instalación:
 
 ### Opcion 1 - Clonacion de Repositorio (HTTPS).  
