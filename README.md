@@ -1,18 +1,18 @@
 # TP - Laboratorio de programación y Lenguaje 2024
-Grupo **Code Of Duty**
+### Grupo **"Code Of Duty"**
 
 ### Integrantes:
-	• Alvez Sofia
- 	• Maldonado Ignacio
-  	• Mentoro Facundo
-   	• Romero Sergio
+• Alvez Sofia
+• Maldonado Ignacio
+• Mentoro Facundo
+• Romero Sergio
 
 ## Guia de Instalación:
 
 ### Opcion 1 - Clonacion de Repositorio (HTTPS).  
 
 Desde la terminal Git Bash ir al directorio donde se desea clonar el proyecto. Escribir el siguiente comando para clonar el repositorio
-**git clone https://github.com/Veik1/TP-LPyL-CoD.git**
+```**git clone https://github.com/Veik1/TP-LPyL-CoD.git**```
 
 ###  Opcion 2 - Descarga de Repositorio.
 
@@ -22,9 +22,9 @@ Una vez que se tenga el proyecto en el directorio deseado, en un Simbolo de Sist
 
 ## Intalacion de Dependencias e Inicio del Proyecto
 En una terminal dentro de VSCode, correr el siguiente comando para intalar todas las dependencias necesarias para iniciar correctamente el proyecto
-	**npm install**
+	```npm install```
 Luego que se intalen todas las dependecncias, para iniciar el servidor del proyecto correr el siguiente comando:
-	**npm run dev**
+	```npm run dev```
 
 
 ## Uso y Pruebas en Postman
@@ -35,12 +35,16 @@ Una vez intalado y ya corriendo el proyecto en el entorno local..
 
 Los resultados de las pruebas deben ser los siguientes: 
 
-**Get**	     /carreras	              Resultado: 200	Obtener todas la carreras   
-**Get**	     /carreras/:id	          Resultado: 200, 404	Obtener una carrera en particular   
-**Post**	    /carreras	              Resultado: 201 , 400	Crear una Carrera   
-**Delete**	  /carreras/:id	          Resultado: 200, 404	Borra una carrera en particular   
-**Post**	    /carreras/:id/materia	  Resultado: 201, 404, 400	Crea un materia dentro de una carrera    
-**Get**	     /carreras/:id/materias 	Resultado: 200, 404	Obtener todas la materias de una Carrera    
-**Get**	     /materias	              Resultado: 200	Obtener todas las materias     
-**Get**	     /materias/:id	          Resultado: 200, 404	Obtener una materia en particular     
-**Delete**	  /materias/:id          	Resultado: 200, 404	Borra una materia en particular   
+|Verbo|Recurso|Status code|Descripción|
+|-----|-------|-----------|-----------|
+|POST|/carreras|201 , 400|Crear una Carrera|
+|GET|/carreras|200|Obtener todas la carreras|
+|GET|/carreras/:id|200, 404|Obtener una carrera en particular|
+|PUT|/carreras/:id|200, 404|Modificar una carrera en particular|
+|DELETE|/carreras/:id|200, 404|Borra una carrera en particular|
+|POST|/carreras/:id/materia|201, 404, 400|Crea un materia dentro de una carrera|
+|GET|/carreras/:id/materias|200, 404| Obtener todas la materias de una Carrera
+|GET|/materias|200|Obtener todas las materias|
+|GET|/materias/:id|200, 404|Obtener una materia en particular|
+|PUT|/materias/:id|200, 404|Modificar una materia en particular|
+|DELETE|/materias/:id|200, 404|Borra una materia en particular|
