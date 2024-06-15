@@ -22,8 +22,11 @@ Una vez que se tenga el proyecto en el directorio deseado, en un Simbolo de Sist
 
 ## Intalacion de Dependencias e Inicio del Proyecto
 En una terminal dentro de VSCode, correr el siguiente comando para intalar todas las dependencias necesarias para iniciar correctamente el proyecto
+
 	```npm install```
+ 
 Luego que se intalen todas las dependecncias, para iniciar el servidor del proyecto correr el siguiente comando:
+
 	```npm run dev```
 
 
