@@ -231,6 +231,38 @@
 		},
 		{
 			"name": "Get all \"Materias\"",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/materias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"materias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Materia ID 1 (from Carrera ID 1)",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -247,14 +279,6 @@
 						"1"
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Materia ID 1 (from Carrera ID 1)",
-			"request": {
-				"method": "GET",
-				"header": []
 			},
 			"response": []
 		},
