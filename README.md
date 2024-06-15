@@ -41,14 +41,14 @@ Los resultados de las pruebas deben ser los siguientes:
 
 |Verbo|Recurso|Status code|Descripción|
 |-----|-------|-----------|-----------|
-|POST|/carreras|201 , 400|Crear una Carrera|
-|GET|/carreras|200|Obtener todas la carreras|
-|GET|/carreras/:id|200, 404|Obtener una carrera en particular|
-|PUT|/carreras/:id|200, 404|Modificar una carrera en particular|
-|DELETE|/carreras/:id|200, 404|Borra una carrera en particular|
-|POST|/carreras/:id/materia|201, 404, 400|Crea un materia dentro de una carrera|
-|GET|/carreras/:id/materias|200, 404| Obtener todas la materias de una Carrera
-|GET|/materias|200|Obtener todas las materias|
-|GET|/materias/:id|200, 404|Obtener una materia en particular|
-|PUT|/materias/:id|200, 404|Modificar una materia en particular|
-|DELETE|/materias/:id|200, 404|Borra una materia en particular|
+|POST|/carreras|201, 400, 500|Crear una Carrera|
+|GET|/carreras|200, 500|Obtener todas la carreras|
+|GET|/carreras/:id|200, 404, 500|Obtener una carrera en particular|
+|PUT|/carreras/:id|200, 404, 500|Modificar una carrera en particular|
+|DELETE|/carreras/:id|200, 404, 500|Borra una carrera en particular|
+|POST|/carreras/:id/materia|201, 404, 400, 500|Crea un materia dentro de una carrera|
+|GET|/carreras/:id/materias|200, 404, 500| Obtener todas la materias de una Carrera
+|GET|/materias|200, 500|Obtener todas las materias|
+|GET|/materias/:id|200, 404, 500|Obtener una materia en particular|
+|PUT|/materias/:id|200, 404, 500|Modificar una materia en particular|
+|DELETE|/materias/:id|200, 404, 500|Borra una materia en particular|
