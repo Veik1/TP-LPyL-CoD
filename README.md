@@ -12,7 +12,8 @@
 ### Opcion 1 - Clonacion de Repositorio (HTTPS).  
 
 Desde la terminal Git Bash ir al directorio donde se desea clonar el proyecto. Escribir el siguiente comando para clonar el repositorio
-```**git clone https://github.com/Veik1/TP-LPyL-CoD.git**```
+
+```git clone https://github.com/Veik1/TP-LPyL-CoD.git```
 
 ###  Opcion 2 - Descarga de Repositorio.
 
