@@ -1,5 +1,5 @@
 # TP - Laboratorio de programación y Lenguaje 2024
-### Grupo **"Code Of Duty"**
+### Grupo **"Code of Duty"**
 
 ### Integrantes:
 ```
