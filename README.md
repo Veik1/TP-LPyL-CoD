@@ -2,11 +2,12 @@
 ### Grupo **"Code Of Duty"**
 
 ### Integrantes:
+```
 • Alvez Sofia
 • Maldonado Ignacio
 • Mentoro Facundo
 • Romero Sergio
-
+```
 
 ## Guia de Instalación:
 
@@ -33,12 +34,22 @@ Luego que se intalen todas las dependecncias, para iniciar el servidor del proye
 
 
 ## Uso y Pruebas en Postman
-Una vez intalado y ya corriendo el proyecto en el entorno local..
-. Abrir Postman
-. En **Collections** ir a Import
-. Buscar en files el archivo **“CRUD Testing.postman_collection”** dentro del proyecto
+Una vez intalado y ya corriendo el proyecto en el entorno local:
 
-Los resultados de las pruebas deben ser los siguientes: 
+- Abrir Postman
+
+- Ir al botón ubicado la parte superior izquierda de Postman, y seleccionar **File>Import**...
+
+- Buscar el archivo ya descargado **“CRUD Testing.postman_collection”** dentro del proyecto para arrastrarlo o poder seleccionarlo desde **Choose Files**
+
+- Haga click en **Import** para tener el archivo importado
+
+## El proyecto posee esta estructura:
+
+![DIAGRAMA](DER.png)
+
+
+## Los resultados de las pruebas deben ser los siguientes: 
 
 |Verbo|Recurso|Status code|Descripción|
 |-----|-------|-----------|-----------|
